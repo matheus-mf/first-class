@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../components/Card';
-import { httpClient } from '../services/http/api/index';
-import httpService from '../services/http/index';
+import httpService from '../services/http';
 
 interface Data {
   breed: string;
@@ -26,19 +25,6 @@ export const Info: React.FC = () => {
 
     fetchData()
   },[])
-
-  // useEffect(()=> {
-  //   const fetchData = async () => {
-  //     const response = await httpClient.get('breeds', {
-  //       params: {
-  //         limit: 3
-  //       }
-  //     })
-  
-  //     setData(response.data.data)
-  //   }
-  //   fetchData()
-  // }, [])
 
   return (
     <div>
