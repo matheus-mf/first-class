@@ -4,8 +4,9 @@ Usar o gitflow e PRs para mandar melhorias
 
 # TO DO
 
-[] Buscar protótipo para desenvolver
+[ ] Buscar protótipo para desenvolver
 
+---
 
 ### GitFlow
 
