@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Card } from '../components/Card';
 
 export const Home: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ export const Home: React.FC = () => {
       <p>
         <Link to="/info">Info</Link>
       </p>
-      Home
+      <Card title="Home Page" description="Celia Gilbert" />
     </div>
   );
 }
