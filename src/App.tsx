@@ -1,34 +1,8 @@
-import { useCallback, useEffect, useState } from 'react'
-import { Card } from "./components/Card"
+import * as React from 'react';
+import { AppRouters } from './routers/AppRouters';
 
-function App() {
-  const [values, setValues] = useState<Array<string>>([
-    'card 1',
-    'card 2',
-    'card 3',
-  ]);
-
-  const handleAddCard = useCallback(() => {
-    setValues((oldState) => {
-      const newState = [...oldState]
-      newState.push('new card')
-      return newState
-    });
-  }, []);
-
-  useEffect(() => {
-    handleAddCard();
-  }, [handleAddCard]);
-
+export const App: React.FC = () => {
   return (
-    <>
-      {values.map(card => (
-        <Card text={card} />
-      ))}
-
-      <button onClick={handleAddCard}>Add card</button>
-    </>
+    <AppRouters />
   )
 }
-
-export default App
